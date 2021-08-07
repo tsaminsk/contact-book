@@ -1,6 +1,6 @@
 <template>
   <div class="contact-page">
-    <h1>This is an page</h1>
+    <h1>This is an {{ title }} page</h1>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import { defineComponent, onMounted, onBeforeMount } from 'vue';
 export default defineComponent({
   name: 'Contact',
   setup() {
-    const title = 'Contact page';
+    const title = 'Contact';
 
     onBeforeMount(() => {
       console.log('onBeforeMount');
