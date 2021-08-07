@@ -1,17 +1,30 @@
 <template>
   <div class="home-page">
-    <h1>{{ title }}</h1>
+    <home-menu />
+    <div class="contacts-list">
+      <ContactItem v-for="item in contacts" :item="item" :key="item.name" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import HomeMenu from '@/components/HomeMenu.vue';
+import ContactItem from '@/components/ContactItem.vue';
 
 export default defineComponent({
   name: 'Home',
+  components: {
+    HomeMenu,
+    ContactItem,
+  },
   setup() {
-    const title = 'Home page';
-    return { title };
+    const contacts = [
+      { name: 'Petrov ' },
+      { name: 'Ivanov ' },
+      { name: 'Sidorov ' },
+    ];
+    return { contacts };
   },
 });
 </script>
