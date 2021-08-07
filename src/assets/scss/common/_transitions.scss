@@ -1,0 +1,80 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+// .slide-leave-active,
+// .slide-enter-active {
+//     transition: 1s;
+// }
+
+// .slide-enter {
+//     transform: translate(100%, 0);
+// }
+
+// .slide-leave-to {
+//     transform: translate(-100%, 0);
+// }
+
+@keyframes fadeInStart {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes toggleDown {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes shake {
+    100% {
+        transform: translateX(-7px);
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes toggleDownUp {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(0, 60%, 0);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
